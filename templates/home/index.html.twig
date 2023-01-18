@@ -3,20 +3,28 @@
 {% block title %}Accueil{% endblock %}
 
 {% block main %}
-    <div class="container-fluid d-flex mainTopMargin">
+    <div class="container-fluid d-flex mainTopMargin bgc">
         <div class="col-6">
             <div class="text-center">
                 <h1>Bienvenue sur Koom !</h1>
                 <p class="text-center mt-5">Première plateforme d’appel à projets collaboratifs en france. </p>
                 <div class="d-flex justify-content-evenly mt-5">
                     <button class="RegisterBtn col-2 mt-4 ">S'inscrire</button>
-                    <button class="btn col-3 mt-4">En savoir plus</button>
+                    <button class="aboutBtn col-3 mt-4">En savoir plus</button>
                 </div>
-
             </div>
         </div>
+
         <div class="col-6">
             <img class="d-block m-auto homePicture boxShadow" src="{{ asset('build/img/homePage.770328b5.jpg') }}" alt="image d'accueil">
         </div>
     </div>
+
+    <div class="">
+        <img class="curvy" src="{{ asset('build/img/Vector.7070a04d.svg') }}" alt="wave">
+    </div>
+
+     {% include ('project/ProjectCard.html.twig') %}
+
+    <img class="curvy" src="{{ asset('build/img/VectorBottom2.3463cec3.svg') }}" alt="wave">
 {% endblock %}
