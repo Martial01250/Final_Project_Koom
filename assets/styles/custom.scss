@@ -5,25 +5,37 @@ body {
   background-color: #9D7E66 ;
 }
 
-.mainTopMargin{
+//home page start
+.mainTopPadding{
  padding-top: 150px;
   padding-bottom: 20px;
 }
 
-.RegisterBtn{
-  background-color: #3C4659 ;
+a.RegisterBtn {
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: rgba(60, 70, 89, 1);
   color: white;
   border-radius: 15px;
-  border-style: none;
-  height: 60px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-.aboutBtn{
+a.RegisterBtn:hover {
+  background-color: #312b29;
+  color: white;
+}
+
+a.aboutBtn{
+  text-decoration: none;
+  padding: 10px 30px;
   background-color: #1A1D1C;
   color: white;
   border-radius: 15px;
-  border-style: none;
-  height: 60px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+a.aboutBtn:hover {
+  background-color: rgba(60, 70, 89, 1);
+  color: white;
 }
 
 .homePicture{
@@ -43,4 +55,44 @@ body {
 .viewCard{
   height: 1000px;
   width: 100%;
+}
+//end home page
+
+//--------------------------------------------Next Page --------------------------------------------------------
+
+//Register page
+.registerImg{
+  width: 100%;
+}
+
+.formRegister{
+  background-color: rgba(233, 196, 170, 1) ;
+  padding: 45px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px black;
+}
+
+.button-1 {
+  background-color: rgba(26, 29, 28, 1);
+  border-radius: 15px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: green;
 }

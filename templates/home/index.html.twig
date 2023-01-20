@@ -3,14 +3,14 @@
 {% block title %}Accueil{% endblock %}
 
 {% block main %}
-    <div class="container-fluid d-flex mainTopMargin bgc">
+    <div class="container-fluid d-flex mainTopPadding bgc">
         <div class="col-6">
             <div class="text-center">
                 <h1>Bienvenue sur Koom !</h1>
                 <p class="text-center mt-5">Première plateforme d’appel à projets collaboratifs en france. </p>
                 <div class="d-flex justify-content-evenly mt-5">
-                    <button class="RegisterBtn col-2 mt-4 ">S'inscrire</button>
-                    <button class="aboutBtn col-3 mt-4">En savoir plus</button>
+                    <a href="{{ path('app_user_new') }}" class="RegisterBtn d-flex align-items-center justify-content-center col-2 mt-4">S'inscrire</a>
+                    <a class="aboutBtn col-3 mt-4">En savoir plus</a>
                 </div>
             </div>
         </div>

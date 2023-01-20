@@ -15,10 +15,13 @@
     </head>
     <body>
     {% block body %}
+        {% block header %}
+            {% include ('header.html.twig') %}
+        {% endblock %}
 
-        {% include ('header.html.twig') %}
-
-        {% block main %}{% endblock %}
+        <main class="{% block main_class %}{% endblock %}">
+            {% block main %}{% endblock %}
+        </main>
 
         {% include ('Footer.html.twig') %}
 
