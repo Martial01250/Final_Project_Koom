@@ -36,6 +36,7 @@ class RegisterType extends AbstractType
                     'attr' => ['placeholder' => 'Confirmation de votre Mot de passe']
                 ],
                 'mapped' => false,
+
             ])
         ;
     }
