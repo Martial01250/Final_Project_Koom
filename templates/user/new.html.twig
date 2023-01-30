@@ -15,6 +15,7 @@
                 {{ form_start(form) }}
                 <h1 class="text-center">S'enregistrer</h1>
                 {{ form_row(form.email) }}
+                {{ error }}
                 {{ form_row(form.password) }}
                 <div class="d-flex justify-content-center pt-5">
                     <button type="submit" class="button-1 me-3 my-2">Valider l'inscription</button>
@@ -23,7 +24,7 @@
                         En cliquant sur créer, vous acceptez les
                         <a href="#">conditions générales</a>
                         et la
-                        <a href="#">politique de confidentialité</a> de .KOOM
+                        <a href="#">politique de confidentialité</a> de KOOM
                     </p>
                 {{ form_end(form) }}
             </div>

@@ -28,19 +28,28 @@ class UserController extends AbstractController
     {
 
         $form = $this->createForm(RegisterType::class, new User() );
-
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $emi->persist($form->getData());
-            $emi->flush();
+        $errorMessage = '';
 
-            $this->addFlash('success', 'Enregistrement réussi');
-            return $this->redirectToRoute('app_home');
+        if ($form->isSubmitted() && $form->isValid()) {
+              $user = $emi->getRepository(User::class)->findOneBy(['Email' => $form->getData()->getEmail()]);
+//            var_dump('Test bdd fait');
+            if($user){
+                $errorMessage = 'Email deja utilisé';
+            } else {
+                $emi->persist($form->getData());
+                $emi->flush();
+                $this->addFlash('success', 'Enregistrement réussi');
+                return $this->redirectToRoute('app_home');
+            }
+
         }
 
         return $this->render('user/new.html.twig',[
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'error' => $errorMessage,
         ]);
+
     }
 
     #[Route('/{id}', name: 'app_user_show', methods: ['GET'])]
