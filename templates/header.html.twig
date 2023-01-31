@@ -1,15 +1,31 @@
-    <nav class="navbar navbar-expand-lg p-2 bgc">
-        <div class="container-fluid ">
-            <a class="" href="#"><img class="" src="{{ asset('build/img/Logo_Koom_black.cde1e48e.png') }}" alt="logo koom"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Projets</a>
-                    <a class="nav-link" href="#">Se connecter</a>
-                    <a class="nav-link" href="#">s'inscrire</a>
-                </div>
-            </div>
+<nav>
+
+    <a href="#" class="nav-icon" aria-label="visit homepage" aria-current="page">
+        <img class="" src="{{ asset('build/img/Logo_Koom_black.png') }}" alt="logo koom">
+    </a>
+
+    <div class="main-navlinks">
+        <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navlinks-container">
+            <a href="#" aria-current="page">Accueil</a>
+            <a href="#">Projets</a>
+            <a href="#">Se connecter</a>
+            <a href="#">S'inscrire</a>
         </div>
-    </nav>
+    </div>
+
+    <div class="nav-authentication">
+        <a href="#" class="sign-user" aria-label="sign in page">
+            <img src="{{ asset('build/img/LogoUser.png') }}" alt="user-icon">
+        </a>
+        <div class="sign-btns">
+            <button type="button">Se connecté</button>
+            <button type="button">S'inscrire</button>
+        </div>
+    </div>
+
+</nav>

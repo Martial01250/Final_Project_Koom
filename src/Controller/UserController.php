@@ -26,14 +26,15 @@ class UserController extends AbstractController
     #[Route('/new', name: 'app_user_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $emi): Response
     {
-
+        // create a new form
         $form = $this->createForm(RegisterType::class, new User() );
         $form->handleRequest($request);
         $errorMessage = '';
 
         if ($form->isSubmitted() && $form->isValid()) {
+//            check if the user exists in the database according to his email
               $user = $emi->getRepository(User::class)->findOneBy(['Email' => $form->getData()->getEmail()]);
-//            var_dump('Test bdd fait');
+
             if($user){
                 $errorMessage = 'Email deja utilisé';
             } else {
